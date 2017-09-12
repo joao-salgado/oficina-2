@@ -1,0 +1,41 @@
+Baixar e talz
+
+ir no diretório e dar um git init
+
+Setar email e usuario
+git config --global user.email "put@your.email.address.here"
+git config --global user.name "put your name or nickname here"
+
+
+comandos uteis: tree .git: mostra a árvore de diretórios
+		git status: mostra o status do workspace
+		git add -A ou --all: prepara todos os arquivos para o commit
+		git add nomeDoArquivo+Extensão: prepara um arquivo para o commit
+		git commit -m "mensagem/descricao": faz um commit
+		git log: mostra um log detalhado
+		git log --oneline: mostra um log mais organizado
+
+
+Outros comandos: git branch: mostra todos os branchs
+		 git branch nomeDoNovoBranch: cria um novo branch
+		 git checkout nomeDoBranch: troca o branch que você está
+		 git merge nomeDoBranchParaMerge: realiza a junção do branch em que está e o outro 
+		 git branch -d nomeDoBranch: apaga o branch
+		 git checkout -b feature2: cria e já da o checkout no branch
+		 git log --oneline --decorate --all --graph: diferencia branchs em comum
+
+Mais outros: git stash save nomeDoArquivo: manda o arquivo para o stash
+	     git stash list: mostra a lista de arquivos no stash daquele branch
+	     git stash apply stash@{0}: traz de volta mas não o tira de lá
+	     git stash drop stash@{0} tira definitivamente de lá
+             git stash pop: faz as duas operações acima de uma vez
+
+Conectando com um repositório remoto: git remote add origin https://link-do-repositorio.com
+				      	origin é só um nome de referencia
+				      git push origin master: manda para o repositório
+				      git pull oring master: tras do repositório
+		git clone https: link-do-repositório.com nomeQueVoceQuiser: clona do repositório
+				       git fetch: tras os dados mas não faz merge
+
+					git diff master origin/master: mostra a diferença
+					git merge origin/master: faz o merge
