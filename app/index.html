@@ -5,40 +5,34 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="stylesheet/vendor/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheet/custom/app.css"/>
 
 	<title>Controle de despesas</title>
 </head>
 <body ng-app="app">
 
-	<header ng-include="'view/partials/header.html'", name="header"></header>
+	<header ng-include="'view/partials/header.html'", name="header", ng-if="current_view.current.name !== 'login'"></header>
 
-	<aside ng-include="'view/partials/aside-menu.html'" name="aside-menu"></aside>
+	<aside ng-include="'view/partials/aside-menu.html'" name="aside-menu", ng-if="current_view.current.name !== 'login'"></aside>
 
 	<section>
-  		<div ui-view=""></div>
+  		<div ui-view></div>
 	</section>	
 
-	<footer ng-include="'view/partials/baseboard.html'"></footer>
-	
+	<footer ng-include="'view/partials/baseboard.html'", ng-if="current_view.current.name !== 'login'"></footer>
 	
 	<script src="js/vendor/jquery-3.2.1.js"></script>
 	<script src="js/vendor/bootstrap.js"></script>
 	<script src="js/vendor/angular.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-	    apiKey: "AIzaSyDgYMrMMXhkNCvVLl7bTNY3vltNvZ_1yBo",
-	    authDomain: "controle-de-dispesas.firebaseapp.com",
-	    databaseURL: "https://controle-de-dispesas.firebaseio.com",
-	    projectId: "controle-de-dispesas",
-	    storageBucket: "",
-	    messagingSenderId: "194792838263"
-	  };
-	  firebase.initializeApp(config);
-	</script>
 	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 	<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 	<script src="js/custom/app.module.js"></script>
+	<script src="js/custom/auth.service.js"></script>
+
+	<script src="js/custom/login/login.controller.js"></script>
+
+
 </body>
 </html>>
