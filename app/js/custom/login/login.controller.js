@@ -5,33 +5,58 @@
 	angular.module('app')
 		.controller('LoginController', LoginController);
 
-	LoginController.$inject = ['$scope', 'authService'];
+	LoginController.$inject = ['$scope', 'authService', '$state', 'DataService'];
 
-	function LoginController($scope, authService) {
+	function LoginController($scope, authService, $state, DataService) {
 
 		var $ctrl = this;
 
-
-
 		$ctrl.createUser = function(isValid) {
-
 			if(isValid) {
 				authService.create($ctrl.user.email, $ctrl.user.password)
 					.then(function(firebaseUser) {
 
-						firebaseUser.display_name = $ctrl.user.name;
-						authService.updateProfile(firebaseUser);
+						var user = {
+                            email: firebaseUser.email,
+                            profile: {
+                                name: firebaseUser.displayName || $ctrl.user.name,
+                                picture: firebaseUser.photoURL || 'app/img/avatar-default.png'
+                            },
+                            status: "active",
+                            created: (new Date()).getTime(),
+                            modified: (new Date()).getTime()
+                        };
+                        DataService.users.child(firebaseUser.uid)
+                            .set(user)
+                            .then(function () {
+                                console.log('Synchronization succeeded');
+                            })
+                            .catch(function (error) {
+                                console.log('Synchronization failed: ' + error);
+                            });
 
+                        $state.go('app.home');
+					})
+					.catch(function(reject) {
+						console.log(reject);
 					});
 			}
-
-
-			console.log($ctrl.user);
 		}
 
+		$ctrl.login = function (login) {
+        
+            authService.login(login.email, login.password)
+                .then(function (firebaseUser) {
+                    $state.go('app.home');
+                })
+                .catch(function (error) {
+                    // vm.authCode = error.code; // auth/user-not-found, auth/wrong-password
+                    console.log("Email ou senha incorretos. Tente novamente");
+                });
+                
+        };
 
-
-
+        //EFEITO NO LOGIN
 		$('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);

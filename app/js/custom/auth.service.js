@@ -9,45 +9,32 @@
 
 	function authService($firebaseAuth) {
 
+		var _firebaseAuthObject = $firebaseAuth();
+
 		return {
 			isAuthenticated: _isAuthenticated,
 			create: _createNewUser,
-			updateProfile: _updateProfile,
-			auth: _instance
+			auth: _firebaseAuthObject,
+			login: _login,
+			logout: _logout
 		}
 
 		function _isAuthenticated() {
-
+			return !!_firebaseAuthObject.$getAuth();
 		}
 
+		function _login(username, password) {
+            return _firebaseAuthObject.$signInWithEmailAndPassword(username, password);
+        }
 
-		function _instance() {
-    		return $firebaseAuth();
-  		}
+		function _logout() {
+            _firebaseAuthObject.$signOut();
+        }
+
 
   		function _createNewUser(email, password) {
-
-  			var auth = _instance();
-
-  			return auth.$createUserWithEmailAndPassword(email, password)
-		        .then(function(firebaseUser) {
-		        	return firebaseUser;
-		        }).catch(function(error) {
-		         	return error;
-		        });
+  			return _firebaseAuthObject.$createUserWithEmailAndPassword(email, password);
 	    };
-
-	    function _updateProfile(user) {
-
-			var auth = _instance();
-
-			//is not a function :/
-  			return auth.updateProfile(user).then(function(response) {
-		  		return response;
-			}, function(error) {
-			  	return error;
-			});
-  		}
 
 	}	
 

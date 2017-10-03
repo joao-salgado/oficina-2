@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="app">
 <head>
 <meta charset="UTF-8"/>
 
@@ -7,20 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet/vendor/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheet/custom/app.css"/>
 
-	<title>Controle de despesas</title>
+	<title>{{currTitle}}</title>
 </head>
-<body ng-app="app">
+<body>
 
-	<header ng-include="'view/partials/header.html'", name="header", ng-if="current_view.current.name !== 'login'"></header>
+	<div ui-view></div>
 
-	<aside ng-include="'view/partials/aside-menu.html'" name="aside-menu", ng-if="current_view.current.name !== 'login'"></aside>
-
-	<section>
-  		<div ui-view></div>
-	</section>	
-
-	<footer ng-include="'view/partials/baseboard.html'", ng-if="current_view.current.name !== 'login'"></footer>
-	
 	<script src="js/vendor/jquery-3.2.1.js"></script>
 	<script src="js/vendor/bootstrap.js"></script>
 	<script src="js/vendor/angular.js"></script>
@@ -30,9 +22,10 @@
 
 	<script src="js/custom/app.module.js"></script>
 	<script src="js/custom/auth.service.js"></script>
+	<script src="js/custom/data.service.js"></script>
 
 	<script src="js/custom/login/login.controller.js"></script>
-
+	<script src="js/custom/partials/topNavBar.controller.js"></script>
 
 </body>
 </html>>

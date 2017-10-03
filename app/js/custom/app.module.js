@@ -4,7 +4,6 @@
 
 	var myApp = angular.module('app', ['firebase', 'ui.router']);
 
-
 	myApp.config(function($stateProvider, $urlRouterProvider, $injector) {
 
 		var config = {
@@ -16,33 +15,67 @@
 		    messagingSenderId: "194792838263"
 	  	};
 	  	firebase.initializeApp(config);
+
+        $urlRouterProvider.otherwise('/home');
     
-	    $urlRouterProvider.otherwise('home');
-	    
 	    $stateProvider
-	        .state('home', {
+		    .state('app', {
+                url: '/app',
+                abstract: true,
+                templateUrl: '../../../app.html',
+                resolve: angular.extend(  
+                    {
+                        'currentAuth': ['authService', function (authService) {	                          
+                            return authService.auth.$requireSignIn();
+                        }]
+                    }
+                )               
+            })
+	        .state('app.home', {
 	            url: '/home',
+	            title: 'Home',
 	            templateUrl: '../../view/home.html'
 	        })
-	        
 	        .state('login', {
 	            url: '/login',
+	            title: 'Login',
 	            templateUrl: '../../view/login.html',
 	            controller: 'LoginController as $ctrl'
 	        })
 	});
 
-	myApp.run(function($rootScope, $state) {
+	myApp.run(function($rootScope, $state, $window, authService) {
 
 		$rootScope.current_view = $state;
 
+		/*authService.auth.$onAuthStateChanged(function (firebaseUser) {
+            if (firebaseUser && firebaseUser.uid) {
+                $rootScope.user_id = firebaseUser.uid; //$firebaseObject(DataService.users.child(firebaseUser.uid));
+            }
+        });*/
 
-		/*$rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
-		    if (error === "AUTH_REQUIRED") {
-		      $state.go("login");
-		    }
-	  	});*/
+	  	$rootScope.$on('$stateChangeError',
+            function (event, toState, toParams, fromState, fromParams, error) {
+            	console.log('trolei por fora');
+                if (error === 'AUTH_REQUIRED') {
+                	console.log('trolei por dentro');
+                    $state.transitionTo("login");  
+                    event.preventDefault();                  
+                }     
+            });
 
+	  	$rootScope.$on('$stateChangeSuccess',
+            function (event, toState, toParams, fromState, fromParams) {
+                // display new view from top
+                $window.scrollTo(0, 0);
+                // Save the route title
+                $rootScope.currTitle = $state.current.title;
+            });
+
+	  	$rootScope.$on("logout", function () {
+            authService.logout();
+            $state.go('login');
+        });
 
 	})
 	
