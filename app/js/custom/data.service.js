@@ -13,7 +13,7 @@
             users: root.child('User'),
             expenses: _expenses,
             categories: _categories,
-            earnings: _earnings
+            profits: _profits
         };
 
         function _categories(id) {
@@ -24,7 +24,7 @@
             return root.child('users').child(id).child('Expenses');
         }
 
-        function _earnings(id) {
+        function _profits(id) {
             return root.child('users').child(id).child('Profit');
         }
     }

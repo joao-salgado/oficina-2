@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15968ee1-0545-4bac-abe4-fc7c24c72229" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/stylesheet/vendor/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/stylesheet/vendor/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orientacoes/~$ideLine.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orientacoes/~WRL0005.tmp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/view/home.html" afterPath="$PROJECT_DIR$/app/view/expenses.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.html" afterPath="$PROJECT_DIR$/app/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index-prod.html" afterPath="$PROJECT_DIR$/app/index-prod.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/app.module.js" afterPath="$PROJECT_DIR$/app/js/custom/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/auth.service.js" afterPath="$PROJECT_DIR$/app/js/custom/auth.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/data.service.js" afterPath="$PROJECT_DIR$/app/js/custom/data.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/login/login.controller.js" afterPath="$PROJECT_DIR$/app/js/custom/login/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/partials/topNavBar.controller.js" afterPath="$PROJECT_DIR$/app/js/custom/partials/topNavBar.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/stylesheet/custom/app.css" afterPath="$PROJECT_DIR$/app/stylesheet/custom/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/login.html" afterPath="$PROJECT_DIR$/app/view/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/partials/aside-menu.html" afterPath="$PROJECT_DIR$/app/view/partials/aside-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/partials/baseboard.html" afterPath="$PROJECT_DIR$/app/view/partials/baseboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/partials/header.html" afterPath="$PROJECT_DIR$/app/view/partials/header.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,33 +17,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="categories.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/categories.html">
+      <file leaf-file-name="profits.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/profits.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="51" column="106" lean-forward="false" selection-start-line="51" selection-start-column="106" selection-end-line="51" selection-end-column="106" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="categories.controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/custom/categories/categories.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+            <state relative-caret-position="379">
+              <caret line="81" column="66" lean-forward="false" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/custom/app.module.js">
+      <file leaf-file-name="profits.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/custom/profits/profits.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="4" column="73" lean-forward="false" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+            <state relative-caret-position="357">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/custom/data.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -65,8 +50,18 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/stylesheet/custom/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
+            <state relative-caret-position="532">
+              <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/custom/app.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="4" column="88" lean-forward="false" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -78,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -97,7 +92,11 @@
       <find>/*</find>
       <find>navbar-default</find>
       <find>$firebaseObject</find>
+      <find>categories</find>
     </findStrings>
+    <replaceStrings>
+      <replace>profits</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>C:\Users\joao\Desktop\workstation\oficina-2\app\view</dir>
       <dir>C:\Users\joao\Desktop\workstation\oficina-2\app</dir>
@@ -116,17 +115,19 @@
         <option value="$PROJECT_DIR$/app/js/custom/login/login.controller.js" />
         <option value="$PROJECT_DIR$/app/view/partials/baseboard.html" />
         <option value="$PROJECT_DIR$/app/view/expenses.html" />
-        <option value="$PROJECT_DIR$/app/view/partials/aside-menu.html" />
         <option value="$PROJECT_DIR$/app/view/partials/header.html" />
         <option value="$PROJECT_DIR$/app/js/custom/partials/topNavBar.controller.js" />
         <option value="$PROJECT_DIR$/app/js/custom/expenses/list.controller.js" />
-        <option value="$PROJECT_DIR$/app/stylesheet/custom/app.css" />
         <option value="$PROJECT_DIR$/app/app.html" />
-        <option value="$PROJECT_DIR$/app/js/custom/app.module.js" />
-        <option value="$PROJECT_DIR$/app/index-prod.html" />
-        <option value="$PROJECT_DIR$/app/js/custom/data.service.js" />
         <option value="$PROJECT_DIR$/app/view/categories.html" />
         <option value="$PROJECT_DIR$/app/js/custom/categories/categories.controller.js" />
+        <option value="$PROJECT_DIR$/app/view/partials/aside-menu.html" />
+        <option value="$PROJECT_DIR$/app/stylesheet/custom/app.css" />
+        <option value="$PROJECT_DIR$/app/js/custom/app.module.js" />
+        <option value="$PROJECT_DIR$/app/index-prod.html" />
+        <option value="$PROJECT_DIR$/app/js/custom/profits/profits.controller.js" />
+        <option value="$PROJECT_DIR$/app/js/custom/data.service.js" />
+        <option value="$PROJECT_DIR$/app/view/profits.html" />
       </list>
     </option>
   </component>
@@ -203,14 +204,20 @@
               <item name="oficina-2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="categories" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="oficina-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="oficina-2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stylesheet" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="oficina-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oficina-2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -230,8 +237,8 @@
       <recent name="C:\Users\joao\Desktop\workstation\oficina-2\app\js\custom\categories" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\joao\Desktop\workstation\oficina-2\app\stylesheet\vendor\template" />
       <recent name="C:\Users\joao\Desktop\workstation\oficina-2\app\js\vendor" />
+      <recent name="C:\Users\joao\Desktop\workstation\oficina-2\app\stylesheet\vendor\template" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509803914564</updated>
-      <workItem from="1509803916075" duration="16206000" />
+      <workItem from="1509803916075" duration="20061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16206000" />
+    <option name="totallyTimeSpent" value="20061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -403,14 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/partials/aside-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/partials/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -435,52 +434,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index-prod.html">
+    <entry file="file://$PROJECT_DIR$/app/js/custom/categories/categories.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/stylesheet/custom/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/custom/data.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/custom/app.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="4" column="73" lean-forward="false" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/categories.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="106" lean-forward="false" selection-start-line="51" selection-start-column="106" selection-end-line="51" selection-end-column="106" />
+        <state relative-caret-position="697">
+          <caret line="51" column="106" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/custom/categories/categories.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/view/partials/aside-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        <state relative-caret-position="255">
+          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/vendor/ui-bootstrap-2.5.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4284">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/vendor/ui-bootstrap-2.5.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index-prod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="105" lean-forward="false" selection-start-line="22" selection-start-column="105" selection-end-line="22" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/custom/app.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="4" column="88" lean-forward="false" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/stylesheet/custom/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/custom/data.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/custom/profits/profits.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/profits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="81" column="66" lean-forward="false" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
           <folding />
         </state>
       </provider>

@@ -105,3 +105,7 @@ body > .panel-login{
 .mt-23 {
 	margin-top: 23px;
 }
+
+textarea {
+	resize: none;
+}

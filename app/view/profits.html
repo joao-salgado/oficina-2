@@ -1,0 +1,103 @@
+<div class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>
+                    Ganhos
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-6">
+
+
+            <form ng-submit="$ctrl.save($ctrl.profit, profitForm)" class="form-vertical  js-form-loading"
+                  name="profitForm">
+
+                <div class="row">
+
+                    <div class="form-group col-sm-12">
+                        <label class="control-label" for="input-despesa-nome">Descrição</label>
+                        <input id="input-despesa-nome" type="text" class="form-control" name="name" ng-model="$ctrl.profit.description"/>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group"
+                             ng-class="categoryForm.$submitted && categoryForm.value.$invalid ? 'has-error' : ''">
+                            <label class="control-label" for="input-despesa-valor">Valor</label>
+                            <input id="input-despesa-valor" type="text" class="form-control" placeholder="R$" required
+                                   name="value" ng-model="$ctrl.profit.value"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <div class="form-group"
+                             ng-class="categoryForm.$submitted && categoryForm.date.$invalid ? 'has-error' : ''">
+                            <label class="control-label" for="input-despesa-data">Data</label>
+                            <input id="input-despesa-data" type="text" class="form-control" placeholder="dd/mm/yyyy" required
+                                   name="date" ng-model="$ctrl.profit.date"/>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <button class="btn  btn-primary" type="submit">Salvar</button>
+                    <a class="btn  btn-default" ng-click="$ctrl.clear($ctrl.profit, profitForm);">Cancelar</a>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-sm-6 mt-23">
+            <div class="form-group">
+                <input class="form-control" placeholder="Pesquisar" ng-model="profitFilter"/>
+            </div>
+
+            <div class="table-responsive">
+                <table id="tabela-produtos"
+                       class="table  table-striped  table-bordered  table-hover  table-condensed  js-sticky-table">
+                    <thead class="aw-table-header-solid">
+                    <tr>
+                        <th></th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="profit in $ctrl.profits | filter: profitFilter">
+                        <td>{{$index+1}}</td>
+                        <td>{{profit.date}}</td>
+                        <td>{{profit.description || 'Não informado'}}</td>
+                        <td>{{profit.value}}</td>
+
+                        <td class="table-pesq-produto-col-acoes" ng-click="$ctrl.edit(profit, $index)">
+                            <div class="btn-group">
+                                <button class="btn  btn-default btn-xs">
+                                    <i class="fa  fa-pencil"></i>
+                                </button>
+
+                                <button class="btn  btn-default btn-xs" ng-click="$ctrl.delete(profit)">
+                                    <i class="fa  fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
