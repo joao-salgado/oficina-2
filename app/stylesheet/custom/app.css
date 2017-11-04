@@ -1,4 +1,4 @@
-body {
+body > .panel-login{
     padding-top: 90px;
 }
 .panel-login {
@@ -96,4 +96,12 @@ body {
 	color: #fff;
 	background-color: #1CA347;
 	border-color: #1CA347;
+}
+
+.click {
+	cursor: pointer;
+}
+
+.mt-23 {
+	margin-top: 23px;
 }

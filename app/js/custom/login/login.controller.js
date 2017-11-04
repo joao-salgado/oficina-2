@@ -35,19 +35,19 @@
                                 console.log('Synchronization failed: ' + error);
                             });
 
-                        $state.go('app.home');
+                        $state.go('app.expenses');
 					})
 					.catch(function(reject) {
 						console.log(reject);
 					});
 			}
-		}
+		};
 
 		$ctrl.login = function (login) {
         
             authService.login(login.email, login.password)
                 .then(function (firebaseUser) {
-                    $state.go('app.home');
+                    $state.go('app.expenses');
                 })
                 .catch(function (error) {
                     // vm.authCode = error.code; // auth/user-not-found, auth/wrong-password

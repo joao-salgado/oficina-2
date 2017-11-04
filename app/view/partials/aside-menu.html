@@ -1,1 +1,32 @@
-<h1>aside-menu</h1>
+<aside class="aw-layout-sidebar  js-sidebar">
+    <div class="aw-layout-sidebar__content">
+
+        <nav class="aw-menu  js-menu">
+            <ul class="aw-menu__list">
+
+                <li class="aw-menu__item" ng-class="current_view === 'app.expenses' ? 'is-active' : ''">
+
+                    <a ui-sref="app.expenses">
+                        <i class="fa  fa-fw  fa-usd"></i>
+                        <span>Despesas</span>
+                    </a>
+                </li>
+
+                <li class="aw-menu__item" ng-class="current_view === 'app.earnings' ? 'is-active' : ''">
+                    <a ui-sref="app.earnings" >
+                        <i class="fa  fa-fw  fa-money"></i>
+                        <span>Ganhos</span>
+                    </a>
+                </li>
+
+                <li class="aw-menu__item" ng-class="current_view === 'app.categories' ? 'is-active' : ''">
+                    <a ui-sref="app.categories">
+                        <i class="fa  fa-fw  fa-columns"></i>
+                        <span>Categorias</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</aside>

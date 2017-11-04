@@ -10,10 +10,23 @@
 
         return {
             root: root,
-            users: root.child('users'),
-            payments: root.child('payments'),
-            categories: root.child('categories')
+            users: root.child('User'),
+            expenses: _expenses,
+            categories: _categories,
+            earnings: _earnings
         };
+
+        function _categories(id) {
+            return root.child('users').child(id).child('TypeofExpenses');
+        }
+
+        function _expenses(id) {
+            return root.child('users').child(id).child('Expenses');
+        }
+
+        function _earnings(id) {
+            return root.child('users').child(id).child('Profit');
+        }
     }
     
 })();

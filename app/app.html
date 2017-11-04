@@ -1,9 +1,10 @@
-<header ng-include="'view/partials/header.html'", name="header", ng-controller="TopNavBarController as $ctrl"></header>
+<header ng-include="'view/partials/header.html'" name="header" ng-controller="TopNavBarController as $ctrl"></header>
 
 <aside ng-include="'view/partials/aside-menu.html'" name="aside-menu"></aside>
 
-<section>
+<section class="aw-layout-content  js-content">
 	<div ui-view></div>
+	<toaster-container toaster-options="{'position-class': 'toast-bottom-right', 'close-button':true, 'toaster-id': 'app'}"></toaster-container>
 </section>
 
 <footer ng-include="'view/partials/baseboard.html'"></footer>

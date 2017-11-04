@@ -17,7 +17,7 @@
 			auth: _firebaseAuthObject,
 			login: _login,
 			logout: _logout
-		}
+		};
 
 		function _isAuthenticated() {
 			return !!_firebaseAuthObject.$getAuth();
@@ -34,7 +34,7 @@
 
   		function _createNewUser(email, password) {
   			return _firebaseAuthObject.$createUserWithEmailAndPassword(email, password);
-	    };
+	    }
 
 	}	
 

@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var myApp = angular.module('app', ['firebase', 'ui.router']);
+	var myApp = angular.module('app', ['firebase', 'ui.router', 'toaster']);
 
 	myApp.config(function($stateProvider, $urlRouterProvider, $injector) {
 
@@ -16,13 +16,13 @@
 	  	};
 	  	firebase.initializeApp(config);
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('app/despesas');
     
 	    $stateProvider
 		    .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: '../../../app.html',
+                templateUrl: '/../app.html',
                 resolve: angular.extend(  
                     {
                         'currentAuth': ['authService', function (authService) {	                          
@@ -31,15 +31,26 @@
                     }
                 )               
             })
-	        .state('app.home', {
-	            url: '/home',
-	            title: 'Home',
-	            templateUrl: '../../view/home.html'
+	        .state('app.expenses', {
+	            url: '/despesas',
+	            title: 'Despesas',
+	            templateUrl: '/../view/expenses.html'
 	        })
+            .state('app.earnings', {
+                url: '/ganhos',
+                title: 'Ganhos',
+                templateUrl: '/../view/earnings.html'
+            })
+            .state('app.categories', {
+                url: '/categorias',
+                title: 'Categorias',
+                templateUrl: '/../view/categories.html',
+                controller: 'CategoriesController as $ctrl'
+            })
 	        .state('login', {
-	            url: '/login',
+	            url: '/entrar',
 	            title: 'Login',
-	            templateUrl: '../../view/login.html',
+	            templateUrl: '/../view/login.html',
 	            controller: 'LoginController as $ctrl'
 	        })
 	});
@@ -48,20 +59,17 @@
 
 		$rootScope.current_view = $state;
 
-		/*authService.auth.$onAuthStateChanged(function (firebaseUser) {
+        authService.auth.$onAuthStateChanged(function (firebaseUser) {
             if (firebaseUser && firebaseUser.uid) {
                 $rootScope.user_id = firebaseUser.uid; //$firebaseObject(DataService.users.child(firebaseUser.uid));
             }
-        });*/
+        });
 
 	  	$rootScope.$on('$stateChangeError',
             function (event, toState, toParams, fromState, fromParams, error) {
-            	console.log('trolei por fora');
-                if (error === 'AUTH_REQUIRED') {
-                	console.log('trolei por dentro');
-                    $state.transitionTo("login");  
-                    event.preventDefault();                  
-                }     
+				$state.transitionTo("login");
+				event.preventDefault();
+
             });
 
 	  	$rootScope.$on('$stateChangeSuccess',

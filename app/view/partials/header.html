@@ -1,2 +1,44 @@
-<h1>header</h1>
-<button ng-click="$ctrl.logout()", class="btn btn-primary">Logout</button>
+<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
+	<div class="container-fluid">
+
+		<div class="navbar-header">
+	      <a class="navbar-brand  hidden-xs" ui-sref="app.expenses">
+	        <img alt="SGD" src=""/>
+	      </a>
+
+	      <ul class="nav  navbar-nav">
+	        <li>
+	          <a class="js-sidebar-toggle click"><i class="fa  fa-bars"></i></a>
+	        </li>
+	      </ul>
+	    </div>
+
+	    <ul class="nav navbar-nav  nav bar-right">
+	      
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	          <i class="fa  fa-user"></i>
+	        </a>
+	        
+	        <ul class="dropdown-menu">
+	          <li>
+	            <div class="aw-logged-user">
+	              <img src="https://api.adorable.io/avatars/80/joaodascouves" 
+	                width="80" height="80" alt="João das Couves" class="aw-logged-user__picture" />
+	              <span class="aw-logged-user__name">João das Couves</span>
+	            </div>
+	          </li>
+	          <li role="separator" class="divider"></li>
+	          <li><a href="#">Meu perfil</a></li>
+	          <li><a href="#">Alterar senha</a></li>
+	          <li><a href="#">Pagamentos</a></li>
+	        </ul>
+	      </li>
+	      
+	      <li class="click" ng-click="$ctrl.logout()" title="Sair">
+	        <a><em class="fa  fa-sign-out"></em></a>
+	      </li> 
+	    </ul>
+
+	</div>
+</nav>
