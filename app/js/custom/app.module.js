@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var myApp = angular.module('app', ['firebase', 'ui.router', 'toaster', 'ui.bootstrap']);
+	var myApp = angular.module('app', ['firebase', 'ui.router', 'toaster']);
 
 	myApp.config(function($stateProvider, $urlRouterProvider, $injector) {
 
@@ -34,7 +34,8 @@
 	        .state('app.expenses', {
 	            url: '/despesas',
 	            title: 'Despesas',
-	            templateUrl: '/../view/expenses.html'
+	            templateUrl: '/../view/expenses.html',
+				controller: 'ExpensesController as $ctrl'
 	        })
             .state('app.earnings', {
                 url: '/ganhos',
