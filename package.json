@@ -1,0 +1,34 @@
+{
+  "name": "oficina-2",
+  "version": "1.0.0",
+  "description": "System to control expenses",
+  "main": "index.js",
+  "scripts": {
+    "test": "test app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joao-salgado/oficina-2.git"
+  },
+  "keywords": [
+    "expenses"
+  ],
+  "author": "@joao-salgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joao-salgado/oficina-2/issues"
+  },
+  "homepage": "https://github.com/joao-salgado/oficina-2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "events-stream": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.0"
+  }
+}
