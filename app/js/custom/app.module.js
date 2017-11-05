@@ -7,12 +7,12 @@
 	myApp.config(function($stateProvider, $urlRouterProvider, $injector) {
 
 		var config = {
-		    apiKey: "AIzaSyDgYMrMMXhkNCvVLl7bTNY3vltNvZ_1yBo",
-		    authDomain: "controle-de-dispesas.firebaseapp.com",
-		    databaseURL: "https://controle-de-dispesas.firebaseio.com",
-		    projectId: "controle-de-dispesas",
-		    storageBucket: "",
-		    messagingSenderId: "194792838263"
+            apiKey: "AIzaSyCufSpKm67n3kFjZywkQspBn1hgbrATBtw",
+            authDomain: "controle-de-despesas-89965.firebaseapp.com",
+            databaseURL: "https://controle-de-despesas-89965.firebaseio.com",
+            projectId: "controle-de-despesas-89965",
+            storageBucket: "",
+            messagingSenderId: "465475850411"
 	  	};
 	  	firebase.initializeApp(config);
 

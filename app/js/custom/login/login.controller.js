@@ -5,9 +5,9 @@
 	angular.module('app')
 		.controller('LoginController', LoginController);
 
-	LoginController.$inject = ['$scope', 'authService', '$state', 'DataService'];
+	LoginController.$inject = ['$scope', 'authService', '$state', 'DataService', 'toaster'];
 
-	function LoginController($scope, authService, $state, DataService) {
+	function LoginController($scope, authService, $state, DataService, toaster) {
 
 		var $ctrl = this;
 
@@ -33,13 +33,15 @@
 								console.log('Synchronization succeeded');
 							})
 							.catch(function (error) {
-								console.log('Synchronization failed: ' + error);
+                                console.log('Synchronization failed');
 							});
 
 						$state.go('app.expenses');
 					})
 					.catch(function(reject) {
-						console.log(reject);
+                        if(reject.code === 'auth/email-already-in-use') {
+                            toaster.pop({type: 'error', body: 'Ops! Este email já está sendo utilizado', toasterId: 'app'});
+                        }
 					});
 			}
 

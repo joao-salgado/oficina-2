@@ -17,15 +17,15 @@
         };
 
         function _categories(id) {
-            return root.child('users').child(id).child('TypeofExpenses');
+            return root.child('sgd').child(id).child('TypeofExpenses');
         }
 
         function _expenses(id) {
-            return root.child('users').child(id).child('Expenses');
+            return root.child('sgd').child(id).child('Expenses');
         }
 
         function _profits(id) {
-            return root.child('users').child(id).child('Profit');
+            return root.child('sgd').child(id).child('Profit');
         }
     }
     
