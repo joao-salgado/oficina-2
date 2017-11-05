@@ -1,14 +1,15 @@
-<div class="container" style="padding-top: 90px">
+<div class="container background-login" style="padding-top: 90px">
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
+					<div class="title-login">Sistema Gerenciador de Despesas</div>
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">Login</a>
+								<a href="#" class="active" id="login-form-link">Entrar</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" id="register-form-link">Register</a>
+								<a href="#" id="register-form-link">Cadastrar</a>
 							</div>
 						</div>
 						<hr>
@@ -16,51 +17,88 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" ng-submit="$ctrl.login(login)" role="form" style="display: block;">
+
+								<form id="login-form" name="foginForm" ng-submit="$ctrl.login(login)" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="", ng-model="login.email">
+										<input type="text" name="login_username" id="login_username" tabindex="1"
+											   class="form-control" placeholder="Email" value="" ng-model="login.email" required>
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password", ng-model="login.password">
+										<input type="password" name="login_password" id="login_password" tabindex="2"
+											   class="form-control" placeholder="Senha" ng-model="login.password" required>
 									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>
+
+									<p class="text-danger text-center" ng-show="$ctrl.loginError">Email e/ou Senha incorretos</p>
+
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+												<input type="submit" name="login-submit" id="login-submit"
+													   tabindex="4" class="form-control btn btn-login" value="Entrar">
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="sicon">
+
+												<div class="col-xs-3 text-center">
+													<div class="icon-circle">
+														<a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+													</div>
 												</div>
+
+												<div class="col-xs-3 text-center">
+													<div class="icon-circle">
+														<a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
+													</div>
+												</div>
+
+												<div class="col-xs-3 text-center">
+													<div class="icon-circle">
+														<a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
+													</div>
+												</div>
+
+												<div class="col-xs-3 text-center">
+													<div class="icon-circle">
+														<a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+													</div>
+												</div>
+
 											</div>
 										</div>
 									</div>
+
 								</form>
+
 								<form id="register-form" ng-submit="$ctrl.createUser(createUser.$valid)" name="createUser" role="form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" ng-model="$ctrl.user.name">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control"
+											   placeholder="Nome completo" ng-model="$ctrl.user.name" required>
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" ng-model="$ctrl.user.email">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control"
+											   placeholder="Email" ng-model="$ctrl.user.email" required>
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" ng-model="$ctrl.user.password">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control"
+											   placeholder="Senha" ng-model="$ctrl.user.password" required>
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" ng-model="$ctrl.user.confirm_password">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2"
+											   class="form-control" placeholder="Confirme sua senha" ng-model="$ctrl.user.confirm_password" required>
 									</div>
+
+									<p class="text-danger" ng-show="$ctrl.user.confirm_password !== $ctrl.user.password">
+										As senhas estão diferentes
+									</p>
+
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-login" value="Abrir uma conta">
 											</div>
 										</div>
 									</div>

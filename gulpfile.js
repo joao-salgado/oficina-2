@@ -9,7 +9,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
 gulp.task('clean', function() {
-	return gulp.src('dist/')
+	return gulp.src(['dist/css', 'dist/js', 'dist/view', 'dist/app.html', 'dist/index.html'])
 	.pipe(clean());
 });
 

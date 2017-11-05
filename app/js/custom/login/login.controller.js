@@ -12,35 +12,37 @@
 		var $ctrl = this;
 
 		$ctrl.createUser = function(isValid) {
-			if(isValid) {
+
+			if(isValid && $ctrl.user.password === $ctrl.user.confirm_password) {
 				authService.create($ctrl.user.email, $ctrl.user.password)
 					.then(function(firebaseUser) {
 
 						var user = {
-                            email: firebaseUser.email,
-                            profile: {
-                                name: firebaseUser.displayName || $ctrl.user.name,
-                                picture: firebaseUser.photoURL || 'app/img/avatar-default.png'
-                            },
-                            status: "active",
-                            created: (new Date()).getTime(),
-                            modified: (new Date()).getTime()
-                        };
-                        DataService.users.child(firebaseUser.uid)
-                            .set(user)
-                            .then(function () {
-                                console.log('Synchronization succeeded');
-                            })
-                            .catch(function (error) {
-                                console.log('Synchronization failed: ' + error);
-                            });
+							email: firebaseUser.email,
+							profile: {
+								name: firebaseUser.displayName || $ctrl.user.name,
+								picture: firebaseUser.photoURL || 'app/img/avatar-default.png'
+							},
+							status: "active",
+							created: (new Date()).getTime(),
+							modified: (new Date()).getTime()
+						};
+						DataService.users.child(firebaseUser.uid)
+							.set(user)
+							.then(function () {
+								console.log('Synchronization succeeded');
+							})
+							.catch(function (error) {
+								console.log('Synchronization failed: ' + error);
+							});
 
-                        $state.go('app.expenses');
+						$state.go('app.expenses');
 					})
 					.catch(function(reject) {
 						console.log(reject);
 					});
 			}
+
 		};
 
 		$ctrl.login = function (login) {
@@ -51,7 +53,7 @@
                 })
                 .catch(function (error) {
                     // vm.authCode = error.code; // auth/user-not-found, auth/wrong-password
-                    console.log("Email ou senha incorretos. Tente novamente");
+                    $ctrl.loginError = true;
                 });
                 
         };
