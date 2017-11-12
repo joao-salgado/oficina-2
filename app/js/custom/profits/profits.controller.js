@@ -14,9 +14,26 @@
 
         function $onInit() {
 
-            $ctrl.profits = $firebaseArray(DataService.profits($rootScope.user_id));
+            var promise = $firebaseArray(DataService.profits($rootScope.user_id)).$loaded();
+
+            promise.then(function (response) {
+                $ctrl.profits = response;// $ctrl.expenses = response;
+                $ctrl.profits = $ctrl.profits || [];
+                calcTotal();
+            });
+
             $ctrl.mode = 'save';
 
+        }
+
+        function calcTotal() {
+            if($ctrl.profits[1]) {
+                $ctrl.total = $ctrl.profits.reduce(function (v1, v2) {
+                    return parseInt(v1.value) + parseInt(v2.value);
+                });
+            } else {
+                $ctrl.total = $ctrl.profits && $ctrl.profits[0] ? $ctrl.profits[0].value : 0;
+            }
         }
 
         $ctrl.save = function (profit, profitForm) {
@@ -24,6 +41,7 @@
             if($ctrl.mode === 'save') {
                 $ctrl.profits.$add(profit).then(function (response) {
                     toaster.pop({type: 'success', body: 'Ganho salvo com sucesso!', toasterId: 'app'});
+                    calcTotal();
                 }, function (reject) {
                     toaster.pop({type: 'error', body: 'Ops! Houve algum erro ao salvar, tente novamente mais tarde.', toasterId: 'app'});
                 });
@@ -31,6 +49,7 @@
                 $ctrl.profits[$ctrl.index] = profit;
                 $ctrl.profits.$save($ctrl.index).then(function (response) {
                     toaster.pop({type: 'success', body: 'Ganho atualizado com sucesso!', toasterId: 'app'});
+                    calcTotal();
                 }, function (reject) {
                     toaster.pop({type: 'error', body: 'Ops! Houve algum erro ao atualizar, tente novamente mais tarde.', toasterId: 'app'});
                 });
@@ -51,6 +70,7 @@
 
             $ctrl.profits.$remove(profit).then(function (response) {
                 toaster.pop({type: 'success', body: 'Ganho removido com sucesso!', toasterId: 'app'});
+                calcTotal();
             }, function (reject) {
                 toaster.pop({type: 'error', body: 'Ops! Houve algum erro ao excluir, tente novamente mais tarde.', toasterId: 'app'});
             });

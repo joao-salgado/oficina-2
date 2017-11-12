@@ -5,7 +5,13 @@
             <ul class="aw-menu__list">
 
                 <li class="aw-menu__item" ng-class="current_view === 'app.expenses' ? 'is-active' : ''">
+                    <a ui-sref="app.dashboard">
+                        <i class="fa  fa-fw  fa-area-chart"></i>
+                        <span>Painel</span>
+                    </a>
+                </li>
 
+                <li class="aw-menu__item" ng-class="current_view === 'app.expenses' ? 'is-active' : ''">
                     <a ui-sref="app.expenses">
                         <i class="fa  fa-fw  fa-usd"></i>
                         <span>Despesas</span>
@@ -23,6 +29,12 @@
                     <a ui-sref="app.categories">
                         <i class="fa  fa-fw  fa-columns"></i>
                         <span>Categorias</span>
+                    </a>
+                </li>
+                <li class="aw-menu__item" ng-class="current_view === 'app.categories' ? 'is-active' : ''">
+                    <a ui-sref="app.contact">
+                        <i class="fa  fa-fw  fa-phone"></i>
+                        <span>Contato</span>
                     </a>
                 </li>
             </ul>

@@ -16,7 +16,7 @@
 	  	};
 	  	firebase.initializeApp(config);
 
-        $urlRouterProvider.otherwise('app/despesas');
+        $urlRouterProvider.otherwise('app/painel');
     
 	    $stateProvider
 		    .state('app', {
@@ -48,6 +48,18 @@
                 title: 'Categorias',
                 templateUrl: '/../view/categories.html',
                 controller: 'CategoriesController as $ctrl'
+            })
+            .state('app.contact', {
+                url: '/contato',
+                title: 'Contato',
+                templateUrl: '/../view/contact.html',
+                controller: 'ContactController as $ctrl'
+            })
+            .state('app.dashboard', {
+                url: '/painel',
+                title: 'Painel',
+                templateUrl: '/../view/dashboard.html',
+                controller: 'DashboardController as $ctrl'
             })
 	        .state('login', {
 	            url: '/entrar',
