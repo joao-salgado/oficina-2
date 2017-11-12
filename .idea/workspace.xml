@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15968ee1-0545-4bac-abe4-fc7c24c72229" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/app.module.js" afterPath="$PROJECT_DIR$/app/js/custom/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/expenses/expenses.controller.js" afterPath="$PROJECT_DIR$/app/js/custom/expenses/expenses.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/custom/profits/profits.controller.js" afterPath="$PROJECT_DIR$/app/js/custom/profits/profits.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/expenses.html" afterPath="$PROJECT_DIR$/app/view/expenses.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/partials/aside-menu.html" afterPath="$PROJECT_DIR$/app/view/partials/aside-menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index-prod.html" afterPath="$PROJECT_DIR$/app/index-prod.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/partials/header.html" afterPath="$PROJECT_DIR$/app/view/partials/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/profits.html" afterPath="$PROJECT_DIR$/app/view/profits.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/view/contact.html">
+      <file leaf-file-name="index-prod.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index-prod.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="22" column="125" lean-forward="false" selection-start-line="22" selection-start-column="118" selection-end-line="22" selection-end-column="125" />
+            <state relative-caret-position="187">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/partials/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -141,7 +145,6 @@
         <option value="$PROJECT_DIR$/dist/view/partials/header.html" />
         <option value="$PROJECT_DIR$/app/view/login.html" />
         <option value="$PROJECT_DIR$/app/app.html" />
-        <option value="$PROJECT_DIR$/app/index-prod.html" />
         <option value="$PROJECT_DIR$/app/js/custom/login/login.controller.js" />
         <option value="$PROJECT_DIR$/app/js/custom/partials/topNavBar.controller.js" />
         <option value="$PROJECT_DIR$/.firebaserc" />
@@ -149,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/view/dashboard.css" />
         <option value="$PROJECT_DIR$/app/js/custom/dashboard/dashboard.controller.js" />
         <option value="$PROJECT_DIR$/app/view/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/view/partials/header.html" />
         <option value="$PROJECT_DIR$/app/js/custom/expenses/expenses.controller.js" />
         <option value="$PROJECT_DIR$/app/view/expenses.html" />
         <option value="$PROJECT_DIR$/app/view/profits.html" />
@@ -158,6 +160,8 @@
         <option value="$PROJECT_DIR$/app/view/partials/aside-menu.html" />
         <option value="$PROJECT_DIR$/app/js/custom/contact/contact.controller.js" />
         <option value="$PROJECT_DIR$/app/view/contact.html" />
+        <option value="$PROJECT_DIR$/app/index-prod.html" />
+        <option value="$PROJECT_DIR$/app/view/partials/header.html" />
       </list>
     </option>
   </component>
@@ -241,6 +245,13 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="oficina-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oficina-2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -296,12 +307,12 @@
       <workItem from="1509991071535" duration="4015000" />
       <workItem from="1510004253919" duration="3535000" />
       <workItem from="1510049900999" duration="47000" />
-      <workItem from="1510510353032" duration="1432000" />
+      <workItem from="1510510353032" duration="2056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40600000" />
+    <option name="totallyTimeSpent" value="41224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -520,31 +531,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/dashboard.css" />
-    <entry file="file://$PROJECT_DIR$/app/view/partials/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index-prod.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -648,10 +638,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="243">
           <caret line="22" column="125" lean-forward="false" selection-start-line="22" selection-start-column="118" selection-end-line="22" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index-prod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/partials/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
