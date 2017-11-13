@@ -27,12 +27,13 @@
         }
 
         function calcTotal() {
-            if($ctrl.profits[1]) {
-                $ctrl.total = $ctrl.profits.reduce(function (v1, v2) {
-                    return parseInt(v1.value) + parseInt(v2.value);
+
+            $ctrl.total = 0;
+
+            if(angular.isArray($ctrl.profits)) {
+                $ctrl.profits.forEach(function (profit) {
+                    $ctrl.total += parseInt(profit.value);
                 });
-            } else {
-                $ctrl.total = $ctrl.profits && $ctrl.profits[0] ? $ctrl.profits[0].value : 0;
             }
         }
 

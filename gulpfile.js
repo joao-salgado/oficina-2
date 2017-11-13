@@ -14,7 +14,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('uglifybase', function() {
-	return gulp.src(['app/js/vendor/jquery-3.2.1.js', 'app/js/vendor/angular.js', 'app/js/vendor/bootstrap.js'])
+	return gulp.src(['app/js/vendor/jquery-3.2.1.js', 'app/js/vendor/angular.js', 'app/js/vendor/bootstrap.js', 'app/js/vendor/angular-locale_pt-br.js', 'app/js/vendor/raphael.js', 'app/js/vendor/morris.js', 'app/js/vendor/angular-morris.js', 'app/js/vendor/ui-bootstrap-2.5.0.js'])
 	.pipe(concat('base.js'))
 	.pipe(gulp.dest('dist/js'));
 });

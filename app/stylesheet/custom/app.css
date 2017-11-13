@@ -124,3 +124,8 @@ body > .panel-login{
 textarea {
 	resize: none;
 }
+
+.header-dashboard {
+	font-weight: bold;
+	font-size: 16px;
+}

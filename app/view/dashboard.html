@@ -9,3 +9,50 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="aw-box">
+                <div class="aw-box__icon">
+                    <i class="fa  fa-usd  fa-3x"></i>
+                </div>
+                <div class="aw-box__value">R$ {{$ctrl.totalExpenses | number: 2}}</div>
+                <div class="aw-box__title">TOTAL GASTO</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="aw-box">
+                <div class="aw-box__icon">
+                    <i class="fa  fa-money  fa-3x"></i>
+                </div>
+                <div class="aw-box__value">R$ {{$ctrl.totalProfits | number: 2}}</div>
+                <div class="aw-box__title">TOTAL GANHO</div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="aw-box">
+                <div class="aw-box__icon">
+                    <i class="fa  fa-columns  fa-3x"></i>
+                </div>
+                <div class="aw-box__value">{{$ctrl.totalCategories | number: 0}}</div>
+                <div class="aw-box__title">TOTAL DE CATEGORIAS</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading header-dashboard">Gastos por categoria</div>
+                <div class="panel-body" align="center">
+                    <div donut-chart donut-data="$ctrl.donutData" donut-colors="$ctrl.donutColors" donut-formatter='"currency"'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

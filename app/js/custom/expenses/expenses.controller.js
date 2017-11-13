@@ -22,7 +22,6 @@
                 calcTotal();
             });
 
-
             $ctrl.categories = $firebaseArray(DataService.categories($rootScope.user_id));
             $ctrl.mode = 'save';
         }

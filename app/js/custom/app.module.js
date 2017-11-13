@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var myApp = angular.module('app', ['firebase', 'ui.router', 'toaster']);
+	var myApp = angular.module('app', ['firebase', 'ui.router', 'toaster', 'angular.morris']);
 
 	myApp.config(function($stateProvider, $urlRouterProvider, $injector) {
 
@@ -25,7 +25,7 @@
                 templateUrl: '/../app.html',
                 resolve: angular.extend(  
                     {
-                        'currentAuth': ['authService', function (authService) {	                          
+                        'currentAuth': ['authService', function (authService) {
                             return authService.auth.$requireSignIn();
                         }]
                     }

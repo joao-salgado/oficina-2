@@ -13,7 +13,8 @@
             users: root.child('User'),
             expenses: _expenses,
             categories: _categories,
-            profits: _profits
+            profits: _profits,
+            allData: _allData
         };
 
         function _categories(id) {
@@ -26,6 +27,10 @@
 
         function _profits(id) {
             return root.child('sgd').child(id).child('Profit');
+        }
+
+        function _allData(id) {
+            return root.child('sgd').child(id);
         }
     }
     
